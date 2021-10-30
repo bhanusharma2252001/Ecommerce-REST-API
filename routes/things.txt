@@ -1,0 +1,14 @@
+1. how router is middleware?
+2. how jwt shares token to another server?
+3. how spread operator works?
+4. video 1:02:00 password authentication
+5. mongodb Aggreate Functions
+
+
+
+ "username":"Admin",
+    "email":"Admin@gmail.com",
+    "password":"1234000789",
+    "isAdmin":true
+
+Admin password=1234000789
