@@ -1,0 +1,844 @@
+{
+	"info": {
+		"_postman_id": "b2060bbc-3623-4408-b034-aea608ad63c1",
+		"name": "shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users Routes",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Admin0014\",\r\n    \"email\":\"Admin0014@gmail.com\",\r\n    \"password\":\"1(*!4@#0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Admin\",   \r\n    \"password\":\"1234000789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"UpdatedAt2:45\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/616580ecb31639cdedd1b9e1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"616580ecb31639cdedd1b9e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/users/616580ecb31639cdedd1b9e1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"616580ecb31639cdedd1b9e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find User by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/users/find/616579aa2b6ea3c27af09846",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"find",
+								"616579aa2b6ea3c27af09846"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/users?new=true",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "new",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users Stats",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/users/stats",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products Routes",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\":\" Levis Tshirt\",\r\n  \"desc\":\"test\",\r\n  \"img\":\"test\",\r\n  \"categories\":[\"tshirt\",\"men\"],\r\n  \"size\":\"m\",\r\n  \"color\":\"grey\",\r\n  \"price\":\"30\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\":\" Updated Nike Tshirt\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/616d434fc9b23c18167244c3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"616d434fc9b23c18167244c3"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Product by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDE0Mzc2MiwiZXhwIjoxNjM0NDAyOTYyfQ.YhO-Owg2kiK-5-hujHAcufYHV0FKIrhGlgiHtNmzspQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/find/616720444fb35a3e3c9bf74e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"find",
+								"616720444fb35a3e3c9bf74e"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Products by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDE0Mzc2MiwiZXhwIjoxNjM0NDAyOTYyfQ.YhO-Owg2kiK-5-hujHAcufYHV0FKIrhGlgiHtNmzspQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\":\" Updated Nike Tshirt\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/616d434fc9b23c18167244c3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"616d434fc9b23c18167244c3"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\":\"616580ecb31639cdedd1b9e1\",\r\n  \"products\":[\r\n      {\r\n          \"productId\":\"21Bhavneshid\",\r\n          \"quantity\":\"2\"\r\n      },\r\n      {\r\n          \"productId\":\"21Bhfdfkdavneshid\",\r\n          \"quantity\":\"4\"\r\n      }\r\n  ],\r\n  \"amount\":\"100\",\r\n  \"address\":\"USA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Routes",
+			"item": [
+				{
+					"name": "Add Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"616579aa2b6ea3c27af09846\",\r\n    \"products\":[\r\n           {\r\n               \"productId\":\"616720444fb35a3e3c9bf74e\",\r\n               \"quantity\":\"2\"\r\n           }\r\n       ],\r\n    \"amount\":\"300\",\r\n    \"address\":\"Rudrapur US NAGAR\",\r\n    \"status\":\"pending\"\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"616579aa2b6ea3c27af09846\",\r\n    \"products\":[\r\n           {\r\n               \"productId\":\"616720444fb35a3e3c9bf74e\",\r\n               \"quantity\":\"2\"\r\n           }\r\n       ],\r\n    \"amount\":\"300\",\r\n    \"address\":\"Rudrapur US NAGAR\",\r\n    \"status\":\"pending\"\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/orders/616d479af59f1759ad30ed70",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders",
+								"616d479af59f1759ad30ed70"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\":\" Puma Tshirt\",\r\n  \"desc\":\"test\",\r\n  \"img\":\"test\",\r\n  \"categories\":[\"tshirt\",\"man\"],\r\n  \"size\":\"m\",\r\n  \"color\":\"grey\",\r\n  \"price\":\"30\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":\"3000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/orders/616d479af59f1759ad30ed70",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders",
+								"616d479af59f1759ad30ed70"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Income",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/orders/income",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders",
+								"income"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart Routes",
+			"item": [
+				{
+					"name": "Add product to cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"usesrId\":\"61670cfa6eaae17bb8f713d8\",\r\n       \"products\":[\r\n           {\r\n               \"productId\":\"616720444fb35a3e3c9bf74e\",\r\n               \"quantity\":\"10\"\r\n           }\r\n       ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/carts/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"carts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cart by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"usesrId\":\"616579aa2b6ea3c27af09846\",\r\n       \"products\":[\r\n           {\r\n               \"productId\":\"616720444fb35a3e3c9bf74e\",\r\n               \"quantity\":\"10\"\r\n           }\r\n       ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/carts/616d70e6d01afbf64658f88e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"carts",
+								"616d70e6d01afbf64658f88e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cart by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"usesrId\":\"616579aa2b6ea3c27af09846\",\r\n       \"products\":[\r\n           {\r\n               \"productId\":\"616720444fb35a3e3c9bf74e\",\r\n               \"quantity\":\"10\"\r\n           }\r\n       ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/carts/616d70e6d01afbf64658f88e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"carts",
+								"616d70e6d01afbf64658f88e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find cart by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"usesrId\":\"616579aa2b6ea3c27af09846\",\r\n       \"products\":[\r\n           {\r\n               \"productId\":\"616720444fb35a3e3c9bf74e\",\r\n               \"quantity\":\"10\"\r\n           }\r\n       ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/carts/find/616d71bed01afbf64658f894",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"carts",
+								"find",
+								"616d71bed01afbf64658f894"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Carts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjcwZDU2NmVhYWUxN2JiOGY3MTNkYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDU0NTI2MiwiZXhwIjoxNjM0ODA0NDYyfQ.GJqDi4cPYmvzMqSVLvfmP2J6PgjmR_wnBqEhFNtZ_9s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"usesrId\":\"616579aa2b6ea3c27af09846\",\r\n       \"products\":[\r\n           {\r\n               \"productId\":\"616720444fb35a3e3c9bf74e\",\r\n               \"quantity\":\"10\"\r\n           }\r\n       ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/carts/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"carts",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
